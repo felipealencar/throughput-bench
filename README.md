@@ -2,7 +2,7 @@
 
 **Jump to: [Quick start](#quick-start) | [Models](#models) | [Methodology](#methodology) | [Pixels → km²](#pixelssec--square-kilometers) | [Contributing results](#contributing-results) | [Citation](#citation)**
 
-A small CLI for measuring inference throughput (img/s) of vision backbones on a single GPU, with a focus on geospatial workloads. Covers **29 timm architectures** (ResNet, EfficientNet, ConvNeXt, MobileNet, RegNet, ViT, DeiT3, Swin, BEiT, CoAtNet) plus **12 geospatial foundation-model encoders** (DOFA, CROMA, SenPaMAE, Galileo, OlmoEarth) under fp32 / fp16 / bf16 / AMP and `torch.compile`. Results are appended to a per-GPU CSV; an interactive [Globe Race webapp](webapp/index.html) turns those numbers into "how fast can each backbone map the world?"
+A small CLI for measuring inference throughput (img/s) of vision backbones on a single GPU, with a focus on geospatial workloads. Covers **29 timm architectures** (ResNet, EfficientNet, ConvNeXt, MobileNet, RegNet, ViT, DeiT3, Swin, BEiT, CoAtNet) plus **12 geospatial foundation-model encoders** (DOFA, CROMA, SenPaMAE, Galileo, OlmoEarth) under fp32 / fp16 / bf16 / AMP and `torch.compile`. Results are appended to a per-GPU CSV ([NVIDIA H100 NVL](results/nvidia_h100_nvl.csv) · [Tesla V100-SXM2 32 GB](results/tesla_v100_sxm2_32gb.csv) so far); an interactive [Globe Race webapp](webapp/index.html) turns those numbers into "how fast can each backbone map the world?"
 
 <p align="center">
   <img src="images/throughput_bench.png" alt="Throughput Bench Globe Race screenshot" width="820">
