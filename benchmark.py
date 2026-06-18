@@ -37,7 +37,7 @@ import timm
 import torch
 import torch.nn as nn
 
-from data import create_dataloader
+from data import create_dataloader, make_spectral_batch
 from models import ModelConfig, get_models
 
 # ---------------------------------------------------------------------------
@@ -397,7 +397,6 @@ def benchmark_gpu_preallocated(
     data_mode: str = "randn",
 ) -> dict:
     """Benchmark on GPU with a pre-allocated batch (no DataLoader overhead)."""
-    from data import make_spectral_batch
 
     use_amp = precision == "amp"
 
